@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4hsy0ef6v8t1"
-path="res://.godot/imported/Tiles_BircksandWalls_Free.png-438ea918e9e6d9069e0da053c1de1f1e.ctex"
+uid="uid://bnaghve6vqfif"
+path="res://.godot/imported/BlackMan.png-e52e1c892eb2fd2bf878d8464675f8a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheets/Tiles_BircksandWalls_Free.png"
-dest_files=["res://.godot/imported/Tiles_BircksandWalls_Free.png-438ea918e9e6d9069e0da053c1de1f1e.ctex"]
+source_file="res://SpriteSheets/BlackMan.png"
+dest_files=["res://.godot/imported/BlackMan.png-e52e1c892eb2fd2bf878d8464675f8a8.ctex"]
 
 [params]
 

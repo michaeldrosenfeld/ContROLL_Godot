@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://desqgva6utvj5"]
+
+[ext_resource type="AudioStream" uid="uid://cpq4x0ccpmcwp" path="res://Music/09 - DavidKBD - Purgatory Pack - MiniLoop 01 (1).ogg" id="1_rkr6i"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_rkr6i")

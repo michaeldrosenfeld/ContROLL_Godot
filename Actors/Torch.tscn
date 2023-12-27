@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4ikvi7vwy78o"]
+
+[ext_resource type="Texture2D" uid="uid://s4qgi3usy1pu" path="res://SpriteSheets/DungeonTiles.png" id="1_1gsnd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fccqg"]
+atlas = ExtResource("1_1gsnd")
+region = Rect2(0, 240, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t06gf"]
+atlas = ExtResource("1_1gsnd")
+region = Rect2(16, 240, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyrsx"]
+atlas = ExtResource("1_1gsnd")
+region = Rect2(32, 240, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nudst"]
+atlas = ExtResource("1_1gsnd")
+region = Rect2(48, 240, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_37fbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fccqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t06gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyrsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nudst")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_6oksh"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d87bf"]
+gradient = SubResource("Gradient_6oksh")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.477064)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_37fbu")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-2, -3)
+scale = Vector2(4.07813, 4.07813)
+color = Color(1, 0.996078, 0.494118, 1)
+energy = 0.25
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_d87bf")

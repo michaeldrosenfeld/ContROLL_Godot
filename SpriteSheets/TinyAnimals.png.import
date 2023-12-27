@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boasffnqoc8ox"
-path="res://.godot/imported/NPC_Girl_spritesheet_64x64.png-285bf71a2d39764c512c39f0075b7017.ctex"
+uid="uid://tp0pm7goq5v"
+path="res://.godot/imported/TinyAnimals.png-b117ec6f52b0a6ba24d4753c68f7fa3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpriteSheets/NPC_Girl_spritesheet_64x64.png"
-dest_files=["res://.godot/imported/NPC_Girl_spritesheet_64x64.png-285bf71a2d39764c512c39f0075b7017.ctex"]
+source_file="res://SpriteSheets/TinyAnimals.png"
+dest_files=["res://.godot/imported/TinyAnimals.png-b117ec6f52b0a6ba24d4753c68f7fa3c.ctex"]
 
 [params]
 
