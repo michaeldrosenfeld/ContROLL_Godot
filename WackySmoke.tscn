@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://ca3nro547g8kp"]
+
+[ext_resource type="Texture2D" uid="uid://dobscrrx1r0n0" path="res://SpriteSheets/DustFX3.png" id="1_2oq0p"]
+[ext_resource type="Texture2D" uid="uid://xntcbcyb8fkc" path="res://SpriteSheets/DustFX1.png" id="1_x4adv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_40r1r"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_npk2u"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 0.992537), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_dw7x4"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.799669, 1)
+colors = PackedColorArray(0.494991, 0.32358, 0.23783, 1, 0.0745098, 0.0509804, 0.0352941, 0.764706, 0, 0, 0, 0)
+
+[sub_resource type="Curve" id="Curve_tybwq"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.493671, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_xj1xq"]
+colors = PackedColorArray(0.745098, 0.537255, 0.403922, 0.294118, 1, 1, 1, 0.301961)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_40r1r")
+amount = 10
+lifetime = 0.5
+draw_order = 1
+texture = ExtResource("1_2oq0p")
+emission_shape = 1
+emission_sphere_radius = 19.85
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 21.48
+initial_velocity_max = 76.68
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+damping_min = 40.0
+damping_max = 100.0
+damping_curve = SubResource("Curve_npk2u")
+angle_min = -185.5
+angle_max = 97.2
+color = Color(0.905882, 0.764706, 0.768627, 1)
+color_ramp = SubResource("Gradient_dw7x4")
+hue_variation_min = -0.07
+hue_variation_max = 0.04
+hue_variation_curve = SubResource("Curve_tybwq")
+anim_speed_min = 0.61
+anim_speed_max = 1.1
+anim_offset_min = 0.0062
+anim_offset_max = 0.0644
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_40r1r")
+amount = 30
+lifetime = 0.5
+explosiveness = 0.25
+texture = ExtResource("1_x4adv")
+emission_shape = 1
+emission_sphere_radius = 10.17
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 46.01
+angular_velocity_min = -10.0
+angular_velocity_max = 10.0
+damping_min = 40.0
+damping_max = 100.0
+damping_curve = SubResource("Curve_npk2u")
+angle_min = -185.5
+angle_max = 97.2
+color = Color(0.976471, 0.94902, 0.937255, 1)
+color_ramp = SubResource("Gradient_xj1xq")
+hue_variation_min = -0.07
+hue_variation_max = 0.04
+hue_variation_curve = SubResource("Curve_tybwq")
+anim_speed_min = 0.61
+anim_speed_max = 1.1
+anim_offset_min = 0.0062
+anim_offset_max = 0.0644

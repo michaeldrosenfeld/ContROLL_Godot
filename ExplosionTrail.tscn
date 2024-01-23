@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv08b0obk2c5p"]
+
+[ext_resource type="Texture2D" uid="uid://dk7luvpyrtlv6" path="res://SpriteSheets/RetroExplosion.png" id="1_r5ifg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nep8s"]
+particles_animation = true
+particles_anim_h_frames = 11
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_tq83o"]
+colors = PackedColorArray(0.871614, 0.707704, 0.54233, 1, 1, 1, 1, 0.603922)
+
+[sub_resource type="Gradient" id="Gradient_hi8n8"]
+colors = PackedColorArray(0.590598, 0.368993, 0.322667, 1, 1, 1, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_as_relative = false
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_nep8s")
+amount = 20
+explosiveness = 0.11
+texture = ExtResource("1_r5ifg")
+emission_shape = 1
+emission_sphere_radius = 30.36
+gravity = Vector2(0, 0)
+color_ramp = SubResource("Gradient_tq83o")
+color_initial_ramp = SubResource("Gradient_hi8n8")
+anim_speed_min = 0.9
+anim_speed_max = 1.14

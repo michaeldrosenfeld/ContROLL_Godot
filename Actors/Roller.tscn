@@ -1,10 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://cs0pmii7oyj7v"]
+[gd_scene load_steps=21 format=3 uid="uid://cs0pmii7oyj7v"]
 
 [ext_resource type="Script" path="res://Actors/Roller.gd" id="1_lcwwi"]
+[ext_resource type="PackedScene" uid="uid://ca3nro547g8kp" path="res://WackySmoke.tscn" id="2_1ibik"]
 [ext_resource type="Texture2D" uid="uid://cnfc1cvubu073" path="res://SpriteSheets/TinyHeroes.png" id="2_01lfo"]
+[ext_resource type="PackedScene" uid="uid://jgiy87hrqqca" path="res://DustTrail2.tscn" id="3_fbh8e"]
+[ext_resource type="PackedScene" uid="uid://c3t5trbvt7fj1" path="res://WaterTrail.tscn" id="3_wk74o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdig5"]
-size = Vector2(56.5325, 56.5325)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt605"]
+size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ql7t"]
 atlas = ExtResource("2_01lfo")
@@ -54,7 +57,7 @@ region = Rect2(32, 32, 16, 16)
 atlas = ExtResource("2_01lfo")
 region = Rect2(48, 32, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_27yea"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b71a5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -132,27 +135,31 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_i2oeg"]
-polygon = PackedVector2Array(-28.2663, -28.2663, 28.2663, -28.2663, 28.2663, 28.2663, -28.2663, 28.2663)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ystu0"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [node name="Roller" type="CharacterBody2D"]
-scale = Vector2(0.283023, 0.283023)
-collision_layer = 7
-collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_lcwwi")
 
+[node name="SmokeTrail" parent="." instance=ExtResource("2_1ibik")]
+visible = false
+scale = Vector2(0.25, 0.25)
+
+[node name="DirtTrail" parent="." instance=ExtResource("3_fbh8e")]
+
+[node name="WaterTrail" parent="." instance=ExtResource("3_wk74o")]
+visible = false
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.90735e-06, -1.90735e-06)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_bdig5")
+position = Vector2(-9.53674e-07, -9.53674e-07)
+shape = SubResource("RectangleShape2D_wt605")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(3.53328, 3.53328)
-sprite_frames = SubResource("SpriteFrames_27yea")
+sprite_frames = SubResource("SpriteFrames_b71a5")
 animation = &"stand_down"
 autoplay = "stand_down"
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_i2oeg")
+occluder = SubResource("OccluderPolygon2D_ystu0")

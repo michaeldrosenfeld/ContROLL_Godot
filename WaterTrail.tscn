@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3t5trbvt7fj1"]
+
+[ext_resource type="Texture2D" uid="uid://o0a5v2ro2vct" path="res://08.png" id="1_524dm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tfhu8"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_ubimx"]
+offsets = PackedFloat32Array(0, 0.488411, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.198835, 0.748611, 0.680185, 0.419608, 0.54099, 0.54099, 0.54099, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_tfhu8")
+scale = Vector2(1.04202, 1)
+amount = 80
+lifetime = 2.0
+texture = ExtResource("1_524dm")
+emission_shape = 1
+emission_sphere_radius = 4.22
+direction = Vector2(10, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 6.13
+initial_velocity_max = 24.54
+damping_min = 0.307
+damping_max = 5.891
+color_ramp = SubResource("Gradient_ubimx")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+anim_speed_min = 1.18
+anim_speed_max = 7.07
